@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS object and function</title>
+</head>
+
+<body>
+    <script>
+        //function defination
+        function createObject() {
+            //object creation
+            var myObject = new Object();
+            myObject.name = "bala";
+            myObject.height = 180;
+            myObject.aboutYourSelf = function () {
+                return "I am " + this.name + ". I am " + this.height + " cm height";                
+            }
+            return myObject;
+        }
+        //this.name is equivalent to myObject.name
+        //this key word takes the current object
+
+        var me = createObject(); //function call
+        console.log(me.aboutYourSelf()) //print the result to browser console
+    </script>
+</body>
+
+</html>
